@@ -1,0 +1,118 @@
+/* -------------------- */
+            /* GENERALI */
+            /* -------------------- */
+            body{
+                margin:0;
+                font-family: Arial, sans-serif;
+                background-color:white;
+            }
+
+            a{
+                color:black;
+                text-decoration:none;
+            }
+
+            /* -------------------- */
+            /* HEADER + MENU */
+            /* -------------------- */
+            header{
+                background-color:white;
+                padding:10px 0;
+            }
+
+            /* prima riga */
+            .menu-top{
+                display:flex;
+                justify-content:center;
+                gap:20px;
+                font-size:14px;
+            }
+
+            /* logo */
+            .logo{
+                font-weight:bold;
+                font-size:18px;
+                margin-right:30px;
+            }
+
+            /* seconda riga */
+            .menu-bottom{
+                display:flex;
+                justify-content:center;
+                gap:25px;
+                margin-top:10px;
+                font-size:13px;
+            }
+
+            /* hover */
+            header a:hover{
+                text-decoration:underline;
+            }
+
+            /* -------------------- */
+            /* BANNER */
+            /* -------------------- */
+            .banner{
+                text-align:center;
+                background-color:white;
+            }
+
+            .banner img{
+                width:100%;
+            }
+
+            .banner h1{
+                margin:20px 0;
+            }
+
+            /* -------------------- */
+            /* PRODOTTI */
+            /* -------------------- */
+            .prodotti{
+                margin-top:40px;
+            }
+
+            .prodotti table{
+                margin:auto;
+            }
+
+            .prodotti td{
+                background-color:white;
+                padding:20px;
+                text-align:center;
+            }
+
+            .prodotti img{
+                width:200px;
+            }
+
+            /* -------------------- */
+            /* PULSANTI */
+            /* -------------------- */
+            button{
+                background-color:#e60012;
+                color:white;
+                border:none;
+                padding:10px 45px;
+                border-radius:40px;
+                cursor:pointer;
+            }
+
+            button:hover{
+                background-color:#b0000e;
+            }
+
+            /* -------------------- */
+            /* SEZIONI FINALI */
+            /* -------------------- */
+            .sezione{
+                text-align:center;
+                padding:40px;
+            }
+
+            footer{
+                background-color:black;
+                color:white;
+                text-align:center;
+                padding:15px;
+            }
