@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Tech Magazine</title>
+
+<style>
+
+/* RESET */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+/* CONTAINER GENERALE */
+.container{
+    width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+}
+
+/* SIDEBAR SINISTRA */
+.sidebar{
+    width:300px;
+}
+
+.logo{
+    background:#ddd;
+    padding:40px;
+    text-align:center;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.news{
+    background:#eee;
+    padding:20px;
+    margin-top:10px;
+}
+
+.shop{
+    margin-top:20px;
+    background:#ddd;
+    padding:15px;
+    text-align:center;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+/* BANNER */
+.banner{
+    flex:1;
+    background:#ccc;
+    height:250px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+}
+
+/* MENU */
+.menu{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.menu a{
+    flex:1;
+    text-align:center;
+    padding:15px;
+    background:#ddd;
+    text-decoration:none;
+    color:black;
+    margin-right:5px;
+}
+
+.menu a:last-child{
+    margin-right:0;
+}
+
+.menu a:hover{
+    background:#bbb;
+}
+
+/* Dropdown */
+.dropdown{
+    position:relative;
+    flex:1;
+    text-align:center;
+}
+
+.dropdown > a{
+    display:block;
+    padding:15px;
+    background:#ddd;
+    text-decoration:none;
+    color:black;
+}
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#eee;
+    flex-direction:column;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a{
+    padding:10px;
+    text-decoration:none;
+    color:black;
+    display:block;
+}
+
+.dropdown-content a:hover{
+    background:#ccc;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+/* SEARCH */
+.search{
+    margin-top:15px;
+    text-align:right;
+}
+
+.search input{
+    padding:8px;
+    width:250px;
+    border-radius:20px;
+    border:1px solid #ccc;
+}
+
+/* COLONNE */
+.columns{
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+}
+
+.column{
+    width:23%;
+    background:#ddd;
+    height:250px;
+    padding:10px;
+}
+
+/* TAG CLOUD */
+.tagcloud{
+    margin-top:30px;
+    background:#ddd;
+    padding:15px;
+}
+
+.tagcloud span{
+    margin-right:10px;
+}
+
+/* FOOTER */
+.footer{
+    margin-top:40px;
+    background:#ddd;
+    padding:30px;
+    text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        
+        <div class="sidebar">
+            <div class="logo">LOGO</div>
+            <div class="news">
+                <strong>News</strong><br>
+                Ultime notizie dal mondo tech.
+            </div>
+            <div class="shop">SHOP</div>
+        </div>
+
+        <div class="banner">
+            BANNER PRINCIPALE
+        </div>
+
+    </div>
+
+    <!-- MENU -->
+    <div class="menu">
+        <a href="#">Menu 1</a>
+        <a href="#">Menu 2</a>
+        <div class="dropdown">
+        <a href="#">Menu 3</a>
+        <div class="dropdown-content">
+            <a href="#">Sotto Menu 1</a>
+            <a href="#">Sotto Menu 2</a>
+            <a href="#">Sotto Menu 3</a>
+            <a href="#">Sotto Menu 4</a>
+        </div>
+    </div>
+        <a href="#">Menu 4</a>
+        <a href="#">Menu 5</a>
+        <a href="#">Menu 6</a>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search">
+        <input type="text" placeholder="Ricerca">
+    </div>
+
+    <!-- COLONNE -->
+    <div class="columns">
+        <div class="column">Colonna 1</div>
+        <div class="column">Colonna 2</div>
+        <div class="column">Colonna 3</div>
+        <div class="column">Colonna 4</div>
+    </div>
+
+    <!-- TAG CLOUD -->
+    <div class="tagcloud">
+        <strong>Tag Cloud:</strong>
+        <span>AI</span>
+        <span>Cybersecurity</span>
+        <span>Cloud</span>
+        <span>Startup</span>
+        <span>Mobile</span>
+        <span>Web</span>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © 2026 Tech Magazine - Tutti i diritti riservati
+    </div>
+
+</div>
+
+</body>
+</html>
