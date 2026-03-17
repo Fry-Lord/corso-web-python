@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Numero maggiore</title>
+</head>
+
+<body>
+    <h1>Quinto esercizio JavaScript</h1>
+    <h1>Trova il numero maggiore</h1>
+
+    <button onclick="maggiore()">Inserisci numeri</button>
+
+
+    <script>
+
+        function maggiore() {
+            let a;
+            let b;
+
+            // input
+            a = parseInt(prompt("Inserisci il primo numero"));
+            b = parseInt(prompt("Inserisci il secondo numero"));
+
+            // confronto
+            if (a > b) {
+                alert("Il numero maggiore è: " + a);
+            }
+            else if (b > a) {
+                alert("Il numero maggiore è: " + b);
+            }
+            else {
+                alert("I numeri sono uguali");
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

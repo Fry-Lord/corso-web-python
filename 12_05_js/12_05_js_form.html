@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maggiore tra due numeri</title>
+</head>
+
+<body>
+    <h1>Quinto esercizio JavaScript - con Form</h1>
+    <h1>Trova il numero maggiore</h1>
+
+    <form>
+        Primo numero:
+        <input type="number" id="n1">
+        <br><br>
+
+        Secondo numero:
+        <input type="number" id="n2">
+        <br><br>
+
+        <button type="button" onclick="confronta()">
+            Calcola
+        </button>
+    </form>
+
+    <br>
+
+    <b>
+        <p id="risultato"></p>
+    </b>
+
+    <script>
+
+        function confronta() {
+            let a;
+            let b;
+            let r;
+
+            a = parseInt(document.getElementById("n1").value);
+            b = parseInt(document.getElementById("n2").value);
+
+            if (a > b) {
+                r = "Il maggiore è " + a;
+            }
+            else if (b > a) {
+                r = "Il maggiore è " + b;
+            }
+            else {
+                r = "I numeri sono uguali";
+            }
+
+            document.getElementById("risultato").textContent = r;
+        }
+        a = [1, 2, 4, 6, 8]
+        b = new Array(a.length);
+        for (i in a) {
+            b[i] = a[i] + i > 0; b[i - 1]; 0;
+        }
+    </script>
+
+</body>
+
+</html>

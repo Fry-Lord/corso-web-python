@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modifica titolo</title>
+</head>
+
+<body>
+
+    <!-- Titolo -->
+    <h1>Terzo esercizio JavaScript</h1>
+    <h2 id="titolo">Titolo da modificare</h2>
+
+    <!-- Paragrafo -->
+    <p>Output JavaScript</p>
+
+    <!-- Pulsante -->
+    <button onclick="cambiaTitolo()">Clicca</button>
+
+    <script>
+
+        function cambiaTitolo() {
+            document.getElementById("titolo").textContent =
+                "Il contenuto della pagina è stato modificato!";
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Somma di due numeri</title>
+</head>
+
+<body>
+
+    <!-- Titolo -->
+    <h1>Quarto esercizio JavaScript</h1>
+    <h2>Calcolo della somma</h2>
+    <h3>i numeri sono costanti<br>A = 5<br>B = 7</h3>
+    <h3 id="titolo">SOMMA = </h3>
+
+    <!-- Pulsante -->
+    <button onclick="calcola()">Calcola somma</button>
+
+
+    <script>
+        function calcola() {
+            // dichiarazione variabili
+            let a;
+            let b;
+            let somma;
+
+            // assegnazione valori
+            a = 5;
+            b = 7;
+
+            // calcolo
+            somma = a + b;
+
+            // output
+            document.getElementById("titolo").textContent =
+                "SOMMA = " + somma;
+        }
+    </script>
+
+</body>
+
+</html>
