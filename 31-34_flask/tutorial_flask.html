@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Tutorial Flask Completo</title>
+
+<style>
+body {font-family: Arial, sans-serif; margin: 40px; background: #f4f6f8; line-height: 1.6;}
+h1 {border-bottom: 3px solid #ccc;}
+h2 {color:#0a4da3;}
+.section {background:white; padding:20px; margin-bottom:20px; border-radius:8px;}
+pre {background:#1e1e1e; color:#eee; padding:10px; border-radius:6px;}
+.highlight {background:#eef3ff; padding:10px; border-left:4px solid #0a4da3;}
+.note {background:#fff3cd; padding:10px; border-left:4px solid #ffcc00;}
+</style>
+
+</head>
+
+<body>
+
+<h1>📘 Tutorial Flask – Guida Completa</h1>
+
+<div class="section">
+<h2>1. Cos’è Flask</h2>
+<p>Flask è un framework scritto in Python che permette di creare applicazioni web dinamiche.</p>
+<p>In pratica, Flask permette a Python di comunicare con il browser.</p>
+<ul>
+<li>Riceve richieste dal browser</li>
+<li>Elabora dati (con Python)</li>
+<li>Restituisce una risposta (HTML)</li>
+</ul>
+<div class="highlight">
+Flask è il collegamento tra il mondo del web (HTML) e la logica (Python)
+</div>
+</div>
+
+<div class="section">
+<h2>2. Server e Localhost</h2>
+<p>Un server è un programma che risponde alle richieste del browser.</p>
+<p>Quando scrivi un indirizzo web, il browser invia una richiesta a un server.</p>
+
+<pre>
+Browser → richiesta → Server → risposta → Browser
+</pre>
+
+<p>Con Flask, il server gira sul tuo computer:</p>
+
+<pre>http://127.0.0.1:5000</pre>
+
+<ul>
+<li>127.0.0.1 = il tuo computer (localhost)</li>
+<li>5000 = porta di comunicazione</li>
+</ul>
+
+<div class="highlight">
+Localhost significa: il sito è eseguito sul tuo PC, non su Internet
+</div>
+
+</div>
+
+<div class="section">
+<h2>3. Installazione Flask</h2>
+<pre>py -m pip install flask</pre>
+
+<div class="note">
+Percorso tipico di flask.exe:<br>
+C:\Users\NOME\AppData\Local\Programs\Python\Python3XX\Scripts
+</div>
+
+</div>
+
+<div class="section">
+<h2>4. Creazione progetto</h2>
+<p>Creare una cartella chiamata:</p>
+<pre>flask_project</pre>
+
+<p>Dentro creare:</p>
+<pre>app.py</pre>
+
+<pre>
+flask_project/
+└── app.py
+</pre>
+</div>
+
+<div class="section">
+<h2>5. Codice base</h2>
+<pre>
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Ciao dal server Flask!"
+
+app.run(debug=True)
+</pre>
+</div>
+
+<div class="section">
+<h2>6. Avvio</h2>
+<p>Aprire il terminale nella cartella del progetto:</p>
+<pre>py app.py</pre>
+</div>
+
+<div class="section">
+<h2>7. Aprire il sito</h2>
+<pre>http://127.0.0.1:5000</pre>
+</div>
+
+<div class="section">
+<h2>8. Route</h2>
+<pre>
+@app.route("/ciao")
+def ciao():
+    return "Ciao ragazzi!"
+</pre>
+</div>
+
+<div class="section">
+<h2>9. Struttura HTML</h2>
+<pre>
+flask_project/
+├── app.py
+└── templates/
+    └── index.html
+</pre>
+</div>
+
+<div class="section">
+<h2>10. Collegare HTML</h2>
+
+<p><strong>app.py</strong></p>
+<pre>
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+app.run(debug=True)
+</pre>
+
+<p><strong>templates/index.html</strong></p>
+<pre>
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Pagina HTML da Flask</h1>
+</body>
+</html>
+</pre>
+
+</div>
+
+<div class="section">
+<h2>11. Errori comuni</h2>
+<ul>
+<li>cartella templates errata</li>
+<li>file non trovato</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>12. GET e POST + esempio</h2>
+
+<p>I metodi HTTP definiscono come il browser comunica con il server.</p>
+
+<ul>
+<li><strong>GET</strong>: richiede dati (es. aprire una pagina)</li>
+<li><strong>POST</strong>: invia dati (es. form)</li>
+</ul>
+
+<div class="highlight">
+GET = leggere dati<br>
+POST = inviare dati
+</div>
+
+<p><strong>app.py</strong></p>
+
+<pre>
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route("/", methods=["GET","POST"])
+def home():
+
+    risultato = None
+
+    if request.method == "POST":
+        a = int(request.form["a"])
+        b = int(request.form["b"])
+        risultato = a + b
+
+    return render_template("index.html", risultato=risultato)
+
+app.run(debug=True)
+</pre>
+
+<p><strong>templates/index.html</strong></p>
+
+<pre>
+<!DOCTYPE html>
+<html>
+<body>
+
+<form method="POST">
+<input name="a">
+<input name="b">
+<button>Calcola</button>
+</form>
+
+{% if risultato %}
+<h2>{{ risultato }}</h2>
+{% endif %}
+
+</body>
+</html>
+</pre>
+
+</div>
+
+<div class="section">
+<h2>13. Conclusione</h2>
+<p>Hai creato una vera web app.</p>
+</div>
+
+</body>
+</html>

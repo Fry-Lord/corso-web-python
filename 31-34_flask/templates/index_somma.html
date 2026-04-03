@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Somma con Flask</title>
+</head>
+<body>
+
+<h1>Calcolo somma</h1>
+
+<form method="POST">
+    <input type="number" name="a" placeholder="Numero A">
+    <input type="number" name="b" placeholder="Numero B">
+    <button type="submit">Calcola</button>
+</form>
+
+{% if risultato is not none %}
+    <h2>Risultato: {{ risultato }}</h2>
+{% endif %}
+
+</body>
+</html>
