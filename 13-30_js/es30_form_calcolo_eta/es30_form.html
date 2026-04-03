@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcolo età</title>
+
+    <link rel="stylesheet" href="es30_form.css">
+
+    <script src="es30_form.js" defer></script>
+</head>
+
+<body>
+
+<h1>Inserimento dati utente</h1>
+
+<form>
+
+    <label>Nome</label>
+    <input type="text" id="nome">
+
+    <label>Cognome</label>
+    <input type="text" id="cognome">
+
+    <label>Data di nascita</label>
+    <input type="date" id="data">
+
+    <button type="button" onclick="calcolaEta()">
+        Calcola età
+    </button>
+
+</form>
+
+<p id="risultato"></p>
+
+</body>
+</html>
